@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+}
+
+//apply plugin: "kotlin"
+
+group 'org.springframework'
+version '6.0.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    compileOnly 'org.projectlombok:lombok:1.16.10'
+//    compileOnly 'org.springframework:spring-context:6.0.0-SNAPSHOT'
+//    compileOnly 'org.springframework:spring-context:6.0.0-SNAPSHOT'
+    compileOnly(project(":spring-context"))
+}
+
+test {
+    useJUnitPlatform()
+}
+
+//当前项目运行环境plugins {    id 'java'}
+// 项目的坐标group 'cn.pw'version '1.0-SNAPSHOT'
+// 指定仓库的路径//mavenCentral()默认只使用远程中央仓库去拉取jar包，
+// 下载到我们指定的本地仓库
+// repositories {
+// 先去本地仓库拉取Jar包    mavenLocal()
+// 本地仓库拉取不到去中央仓库拉取Jar包
+// mavenCentral()}
+// 解决gradle控制台乱码的问题
+// tasks.withType(JavaCompile)
+// {    options.encoding = "UTF-8"}
+// gradle中所有的jar包的坐标都在dependencies属性内放置
+// 每个jar包的坐标有三个基本元素对应Maven中的坐标
+// group name version//
+// testCompile表示该jar包在测试时起作用
+// 我们在gradle添加坐标时都要带上jar包的作用域
+// dependencies {
+// testCompile group: 'junit', name: 'junit', version: '4.12'
+// https://mvnrepository.com/artifact/org.springframework/spring
+// compile group: 'org.springframework', name: 'spring', version: '2.5.6'}
