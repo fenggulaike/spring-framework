@@ -38,4 +38,4 @@ Follow [@SpringCentral](https://twitter.com/springcentral), [@SpringFramework](h
 The Spring Framework is released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0).
 
 ## githup token
-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
+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
