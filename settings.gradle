@@ -62,5 +62,5 @@ settings.gradle.projectsLoaded {
 		}
 	}
 }
-include 'xianxia-springtest'
+include 'myspring-test'
 
