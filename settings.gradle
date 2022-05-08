@@ -63,6 +63,4 @@ settings.gradle.projectsLoaded {
 	}
 }
 include 'xianxia-springtest'
-include 'gh-sorint-test'
-include 'spring-banzhan-test'
 

@@ -74,7 +74,6 @@ dependencies {
 	testRuntimeOnly("org.glassfish:jakarta.el")
 	testRuntimeOnly("com.sun.xml.bind:jaxb-core")
 	testRuntimeOnly("com.sun.xml.bind:jaxb-impl")
-	compileOnly 'org.projectlombok:lombok:1.16.10'
 }
 
 // Prevent xml-apis from being used so that the corresponding XML APIs from
