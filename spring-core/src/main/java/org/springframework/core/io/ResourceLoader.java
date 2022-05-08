@@ -44,7 +44,6 @@ public interface ResourceLoader {
 	/** Pseudo URL prefix for loading from the class path: "classpath:". */
 	String CLASSPATH_URL_PREFIX = ResourceUtils.CLASSPATH_URL_PREFIX;
 
-
 	/**
 	 * Return a {@code Resource} handle for the specified resource location.
 	 * <p>The handle should always be a reusable resource descriptor,
@@ -75,6 +74,15 @@ public interface ResourceLoader {
 	 * (only {@code null} if even the system {@code ClassLoader} isn't accessible)
 	 * @see org.springframework.util.ClassUtils#getDefaultClassLoader()
 	 * @see org.springframework.util.ClassUtils#forName(String, ClassLoader)
+	 */
+	/**
+	 * 公开此ResourceLoader使用的ClassLoader 。
+	 * 需要直接访问ClassLoader的客户端可以通过ResourceLoader以统一的方式访问，而不是依赖线程上下文ClassLoader 。
+	 * 回报：ClassLoader （只有在系统ClassLoader不可访问时才为null ）
+	 * 也可以看看：
+	 * org.springframework.util.ClassUtils.getDefaultClassLoader() ,
+	 * org.springframework.util.ClassUtils.forName(String, ClassLoader)
+	 * org.springframework.core.io.ResourceLoader
 	 */
 	@Nullable
 	ClassLoader getClassLoader();
